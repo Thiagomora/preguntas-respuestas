@@ -1,16 +1,17 @@
-import { Boton } from "./componentes/Boton"
-
+import { BrowserRouter, Route, Routes} from "react-router-dom"
+import { Home } from "./componentes/Home"
+import { QuizFutbol } from "./componentes/QuizFutbol"
+import { Results } from "./componentes/Results"
 export function App () {
-    const ButtonsText =  ["Peliculas", "Mundo", "Futbol","Historia Argentina"]
-
-    return (
+    return(
         <>
-        <div className="app-container">
-            <h1>Juego de preguntas </h1>
-        </div>
-        <div>
-            <Boton texts={ButtonsText}/>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/quiz" element={<QuizFutbol/>}/>
+                <Route path="/result" element={<Results/>}/>
+            </Routes>
+        </BrowserRouter>
         </>
     )
 }
