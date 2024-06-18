@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import questions from '../componentes/QuestionFutbol';
-import "../styles/quiz.css"
+import "/src/styles/quiz.css"
 
-export function QuizFutbol () {
+export function Quiz({ questions }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
@@ -27,29 +26,30 @@ export function QuizFutbol () {
   };
 
   return (
-    <div>
+    <div className="quiz-container">
       {showScore ? (
-        <div>
+        <div className="score-container">
           <h1>Fin</h1>
-          <button onClick={handleFinishQuiz}>ver resultados</button>
+          <button onClick={handleFinishQuiz}>Ver resultados</button>
         </div>
       ) : (
-        <>
-          <div className='container'>
-            <div className='question-container'>
-                <h1>{questions[currentQuestion].question}</h1>
-            </div>
+        <div className="question-wrapper">
+          <div className="question-container">
+            <h1 className="question">{questions[currentQuestion].question}</h1>
+          </div>
+          <div className="options-container">
             {questions[currentQuestion].options.map((option, index) => (
               <button
                 key={index}
+                className="option-button"
                 onClick={() => handleAnswerOptionClick(option === questions[currentQuestion].answer)}
               >
                 {option}
               </button>
             ))}
           </div>
-        </>
+        </div>
       )}
     </div>
-  )
+  );
 }

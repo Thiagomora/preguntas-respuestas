@@ -1,15 +1,22 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../styles/boton.css"
 export function Home () {
+    const navigate = useNavigate();
+
+    const handleQuizSelection = (route) =>{
+        navigate('/quiz/'+route)
+    }
+
+
+
     return (
         <>
-        <div>
-            <h1>Bienvenido al preguntas y respuestas!</h1>
-        </div>
-        <div>
-            <Link to="/quiz">
-                <button>Ingresar</button>
-            </Link>
+        <div className="home-container">
+            <h1>Seleccione el tema</h1>
+            <button onClick={()=> handleQuizSelection('futbol')}>Futbol</button>
+            <button onClick={()=> handleQuizSelection('historia')}>Historia Argentina</button>
+            <button onClick={()=> handleQuizSelection('geografia')}>Geografia</button>
+            <button onClick={()=> handleQuizSelection('cine')}>cine</button>
         </div>
         </>
     )
