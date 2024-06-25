@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "../styles/boton.css"
+import "../styles/home.css"
 export function Home () {
     const navigate = useNavigate();
 
@@ -12,11 +12,17 @@ export function Home () {
     return (
         <>
         <div className="home-container">
-            <h1>Seleccione el tema</h1>
-            <button onClick={()=> handleQuizSelection('futbol')}>Futbol</button>
-            <button onClick={()=> handleQuizSelection('historia')}>Historia Argentina</button>
-            <button onClick={()=> handleQuizSelection('geografia')}>Geografia</button>
-            <button onClick={()=> handleQuizSelection('cine')}>cine</button>
+            <div className="home-wrapper">
+                <div className="home-text">
+                <h1>Seleccione el tema</h1>
+                </div>
+                <div className="home-options">
+                    <button className="option-button" onClick={()=> handleQuizSelection('futbol')}>Futbol</button>
+                    <button className="option-button" onClick={()=> handleQuizSelection('historia')}>Historia Argentina</button>
+                    <button className="option-button" onClick={()=> handleQuizSelection('geografia')}>Geografia</button>
+                    <button className="option-button" onClick={()=> handleQuizSelection('cine')}>cine</button>
+                </div>
+            </div>
         </div>
         </>
     )

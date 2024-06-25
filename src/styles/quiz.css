@@ -6,14 +6,13 @@
     height: 100vh;
 }
 
-  /* Contenedor para el resultado final */
 .score-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100%;
+    height: 100vh;
 }
 
 /* Wrapper para la pregunta y las opciones */
@@ -52,22 +51,26 @@
 
   /* Estilo para los botones de opciones */
 .option-button {
+    width: 40vh;
+    height: 10vh;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #C6D93B;
-    color: #3E402D;
+    background-color: #EBF21B;
+    color: #262626;
     transition: background-color 0.3s;
 }
   /* Estilo para el botón de finalizar */
 .score-container button {
+    width: 40vh;
+    height: 10vh;
     padding: 15px 20px;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #C6D93B;
-    color: white;
+    background-color: #EBF21B;
+    color: #262626;
     transition: background-color 0.3s;
 }

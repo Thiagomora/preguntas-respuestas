@@ -1,0 +1,46 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.home{
+  margin: 0;
+}
+
+.home-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home-text{
+  background-color: white;
+    padding: 100px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+.home-options{
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    max-width: 600px;
+    margin: 20px 0;
+}
+.home-options button {
+  width: 40vh;
+  height: 10vh;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #EBF21B;
+  color: #3E402D;
+  transition: background-color 0.3s;
+}
